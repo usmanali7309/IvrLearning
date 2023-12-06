@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+This XML descriptor is automatically generated and managed by the
+application development environment.  While manual updates to this 
+file may be preserved, it is best to manage this file through the application development environment tool.
+
+Copyright 2004-2019 Avaya Inc.
+--><!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app id="WebApp_ID">
+    <context-param>
+        <param-name>sage.startlanguage</param-name>
+        <param-value>english</param-value>
+        <description>The starting language for the application.</description>
+    </context-param>
+    <context-param>
+        <param-name>sage.ic.throwexceptions</param-name>
+        <param-value>true</param-value>
+        <description>IC Throw Runtime Exception on Error{true|false}</description>
+    </context-param>
+    <context-param>
+        <param-name>sage.cti.autoinvoke.callinfo</param-name>
+        <param-value>true</param-value>
+        <description>CTI Auto invoke CallInfo upon app start{true|false}</description>
+    </context-param>
+    <context-param>
+        <param-name>runtime-ASR</param-name>
+        <param-value>Desktop Microsoft Speech SAPI</param-value>
+        <description>Runtime ASR {SRGS-Literals|SRGS-SISR|Nuance OSR|IBM|...}</description>
+    </context-param>
+    <context-param>
+        <param-name>runtime-SSML</param-name>
+        <param-value>true</param-value>
+        <description>Runtime SSML Generation {true|false} - "true" enables SSML generation, "false" disables.</description>
+    </context-param>
+    <context-param>
+        <param-name>runtime-nature</param-name>
+        <param-value>speech</param-value>
+        <description>Application nature, speech or message</description>
+    </context-param>
+    <context-param>
+        <param-name>runtime-Platform</param-name>
+        <param-value>Desktop</param-value>
+        <description>Runtime Platform {Desktop|Experience Portal|Other|IR|MPS}</description>
+    </context-param>
+    <context-param>
+        <param-name>runtime-VXML-Compatibility</param-name>
+        <param-value>2.1</param-value>
+        <description>2.1 + IVVR, 2.1 Allows VXML 2.1 extensions, 2.0 Uses VXML 2.0 Only</description>
+    </context-param>
+    <context-param>
+        <param-name>runtime-DTMF-Native</param-name>
+        <param-value>LOCAL_SRGS_LITERALS</param-value>
+        <description>(NATIVE|LOCAL_SRGS_SISR|LOCAL_SRGS_LITERALS, NATIVE means DTMF Grammars are in native asr format.</description>
+    </context-param>
+    <context-param>
+        <param-name>allow-html-mode</param-name>
+        <param-value>false</param-value>
+        <description>Allows html mode in speech applications.</description>
+    </context-param>
+    <context-param>
+        <param-name>CollectionSeparator</param-name>
+        <param-value>|</param-value>
+        <description>Collection Separator Char</description>
+    </context-param>
+    <context-param>
+        <param-name>grammar-caching</param-name>
+        <param-value>none</param-value>
+        <description>Grammar caching mode, none=no caching, default=system default or property setting</description>
+    </context-param>
+    <context-param>
+        <param-name>WS1_1700471097340TimeoutSeconds</param-name>
+        <param-value>45</param-value>
+        <description>Web Service timeout for [WS1]</description>
+    </context-param>
+    <context-param>
+        <param-name>WS1_1700471097340EndpointUrl</param-name>
+        <param-value>https://api.github.com/users/mojombo</param-value>
+        <description>Web Service end point for [WS1]</description>
+    </context-param>
+    <context-param>
+        <param-name>WS1_1700471097340Authentication</param-name>
+        <param-value>No Authentication</param-value>
+        <description>Authentication for web service [WS1]</description>
+    </context-param>
+    <context-param>
+        <param-name>WS1_1700471097340Password</param-name>
+        <param-value>i5/PolNOtdo=</param-value>
+        <description>Encrypted password for web service [WS1]</description>
+    </context-param>
+    <context-param>
+        <param-name>WS1_1700471097341Username</param-name>
+        <param-value/>
+        <description>Username for web service [WS1]</description>
+    </context-param>
+    <context-param>
+        <param-name>WS1_1700471097341Preemptive</param-name>
+        <param-value>false</param-value>
+        <description>Use preemptive authorization for web service [WS1]</description>
+    </context-param>
+    <context-param>
+        <param-name>WS1_1700471097341Security</param-name>
+        <param-value>SSL</param-value>
+        <description>Use SSL for web service [WS1]</description>
+    </context-param>
+    <context-param>
+        <param-name>WS1_1700471097341Port</param-name>
+        <param-value/>
+        <description>Port number for use in a secure HTTP connection [WS1]</description>
+    </context-param>
+    <context-param>
+        <param-name>WS1_1700471099703TimeoutSeconds</param-name>
+        <param-value>45</param-value>
+        <description>Web Service timeout for [WS1]</description>
+    </context-param>
+    <context-param>
+        <param-name>WS1_1700471099703EndpointUrl</param-name>
+        <param-value>http://</param-value>
+        <description>Web Service end point for [WS1]</description>
+    </context-param>
+    <context-param>
+        <param-name>WS1_1700471099703Authentication</param-name>
+        <param-value>No Authentication</param-value>
+        <description>Authentication for web service [WS1]</description>
+    </context-param>
+    <context-param>
+        <param-name>WS1_1700471099703Username</param-name>
+        <param-value/>
+        <description>Username for web service [WS1]</description>
+    </context-param>
+    <context-param>
+        <param-name>WS1_1700471099703Password</param-name>
+        <param-value>i5/PolNOtdo=</param-value>
+        <description>Encrypted password for web service [WS1]</description>
+    </context-param>
+    <context-param>
+        <param-name>WS1_1700471099703Preemptive</param-name>
+        <param-value>false</param-value>
+        <description>Use preemptive authorization for web service [WS1]</description>
+    </context-param>
+    <context-param>
+        <param-name>WS1_1700471099703Security</param-name>
+        <param-value>No Security</param-value>
+        <description>Use SSL for web service [WS1]</description>
+    </context-param>
+    <context-param>
+        <param-name>WS1_1700471099703Port</param-name>
+        <param-value/>
+        <description>Port number for use in a secure HTTP connection [WS1]</description>
+    </context-param>
+    
+    <context-param>
+        <param-name>english.phraseset.TTOutbound2.urlbase</param-name>
+        <param-value>/AudioTTOutbound/</param-value>
+    </context-param>
+    <context-param>
+        <param-name>TTOutbound</param-name>
+        <param-value>D:/propertyfile/TTOutbound.properties</param-value>
+        <description>PropertyFile</description>
+    </context-param>
+    <context-param>
+        <param-name>Test</param-name>
+        <param-value>http://localhost:8080/DynamicAudio/</param-value>
+        <description>For testing</description>
+    </context-param>
+    
+    <context-param>
+        <param-name>english.phraseset.Test.urlbase</param-name>
+        <param-value>/DynamicAudio/</param-value>
+    </context-param>
+    <servlet id="avayadefaultdisconnecthandler-servlet">
+        <servlet-name>AvayaDefaultDisconnectHandler</servlet-name>
+        <servlet-class>com.avaya.sce.runtime.DefaultDisconnect</servlet-class>
+    </servlet>
+    <servlet id="avayadefaultexithandler-servlet">
+        <servlet-name>AvayaDefaultExitHandler</servlet-name>
+        <servlet-class>com.avaya.sce.runtime.DefaultExit</servlet-class>
+    </servlet>
+    <servlet id="avayasessiontermination-servlet">
+        <servlet-name>AvayaSessionTerminationServlet</servlet-name>
+        <servlet-class>com.avaya.sce.runtime.AvayaSessionTerminationServlet</servlet-class>
+    </servlet>
+    <servlet id="CheckAdminVariableInfo-servlet">
+        <servlet-name>CheckAdminVariableInfoServlet</servlet-name>
+        <servlet-class>com.avaya.sce.runtimecommon.CheckAdminVariableInfo</servlet-class>
+    </servlet>
+    <servlet id="avayareturnerrorhandler-servlet">
+        <servlet-name>AvayaReturnErrorHandler</servlet-name>
+        <servlet-class>com.avaya.sce.runtime.ReturnErrorHandlerServlet</servlet-class>
+    </servlet>
+    <servlet id="avayareturnerrorthrow-servlet">
+        <servlet-name>AvayaReturnErrorThrow</servlet-name>
+        <servlet-class>com.avaya.sce.runtime.ReturnErrorThrowServlet</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_1">
+        <servlet-name>AppRoot</servlet-name>
+        <servlet-class>flow.AppRoot</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_3">
+        <servlet-name>TTDetailsFetch</servlet-name>
+        <servlet-class>flow.TTDetailsFetch</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_8">
+        <servlet-name>QueryTTDetails</servlet-name>
+        <servlet-class>flow.QueryTTDetails</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_13">
+        <servlet-name>CheckTTLevel</servlet-name>
+        <servlet-class>flow.CheckTTLevel</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_0">
+        <servlet-name>Start</servlet-name>
+        <servlet-class>flow.Start</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_21">
+        <servlet-name>end</servlet-name>
+        <servlet-class>flow.end</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ApiFailure_1">
+        <servlet-name>ApiFailure-Begin</servlet-name>
+        <servlet-class>flow.subflow.ApiFailure.Begin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ApiFailure_4">
+        <servlet-name>ApiFailure-Announce1</servlet-name>
+        <servlet-class>flow.subflow.ApiFailure.Announce1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ApiFailure_9">
+        <servlet-name>ApiFailure-end</servlet-name>
+        <servlet-class>flow.subflow.ApiFailure.end</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_29">
+        <servlet-name>ApiFail</servlet-name>
+        <servlet-class>flow.ApiFail</servlet-class>
+    </servlet>
+    
+    
+    <servlet id="SAGE-callflow-servlet_main_68">
+        <servlet-name>MenuForValid</servlet-name>
+        <servlet-class>flow.MenuForValid</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_70">
+        <servlet-name>MenuForNotValid</servlet-name>
+        <servlet-class>flow.MenuForNotValid</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_TTSolved_NotSolved_1">
+        <servlet-name>TTSolved_NotSolved-Begin</servlet-name>
+        <servlet-class>flow.subflow.TTSolved_NotSolved.Begin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_TTSolved_NotSolved_4">
+        <servlet-name>TTSolved_NotSolved-Data1</servlet-name>
+        <servlet-class>flow.subflow.TTSolved_NotSolved.Data1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_TTSolved_NotSolved_9">
+        <servlet-name>TTSolved_NotSolved-Announce1</servlet-name>
+        <servlet-class>flow.subflow.TTSolved_NotSolved.Announce1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_TTSolved_NotSolved_14">
+        <servlet-name>TTSolved_NotSolved-End</servlet-name>
+        <servlet-class>flow.subflow.TTSolved_NotSolved.End</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_84">
+        <servlet-name>TTSolved_NotSolved</servlet-name>
+        <servlet-class>flow.TTSolved_NotSolved</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_TimeCheck_1">
+        <servlet-name>TimeCheck-Begin</servlet-name>
+        <servlet-class>flow.subflow.TimeCheck.Begin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_TimeCheck_4">
+        <servlet-name>TimeCheck-Announce1</servlet-name>
+        <servlet-class>flow.subflow.TimeCheck.Announce1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_TimeCheck_9">
+        <servlet-name>TimeCheck-end</servlet-name>
+        <servlet-class>flow.subflow.TimeCheck.end</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_RequestCallBack_1">
+        <servlet-name>RequestCallBack-Begin</servlet-name>
+        <servlet-class>flow.subflow.RequestCallBack.Begin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_RequestCallBack_4">
+        <servlet-name>RequestCallBack-Announce1</servlet-name>
+        <servlet-class>flow.subflow.RequestCallBack.Announce1</servlet-class>
+    </servlet>
+    
+    <servlet id="SAGE-callflow-servlet_RequestCallBack_11">
+        <servlet-name>RequestCallBack-end</servlet-name>
+        <servlet-class>flow.subflow.RequestCallBack.end</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_98">
+        <servlet-name>RequestCallBack</servlet-name>
+        <servlet-class>flow.RequestCallBack</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_92">
+        <servlet-name>TimeCheck</servlet-name>
+        <servlet-class>flow.TimeCheck</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_127">
+        <servlet-name>NINM</servlet-name>
+        <servlet-class>flow.NINM</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_NINM_1">
+        <servlet-name>NINM-Begin</servlet-name>
+        <servlet-class>flow.subflow.NINM.Begin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_NINM_4">
+        <servlet-name>NINM-CheckNIOrNM</servlet-name>
+        <servlet-class>flow.subflow.NINM.CheckNIOrNM</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_NINM_17">
+        <servlet-name>NINM-NM</servlet-name>
+        <servlet-class>flow.subflow.NINM.NM</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_NINM_12">
+        <servlet-name>NINM-NI</servlet-name>
+        <servlet-class>flow.subflow.NINM.NI</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_NINM_32">
+        <servlet-name>NINM-End</servlet-name>
+        <servlet-class>flow.subflow.NINM.End</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_NINM_33">
+        <servlet-name>NINM-Exceeded</servlet-name>
+        <servlet-class>flow.subflow.NINM.Exceeded</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_NINM_40">
+        <servlet-name>NINM-ExceededP</servlet-name>
+        <servlet-class>flow.subflow.NINM.ExceededP</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_NINM_31">
+        <servlet-name>NINM-Retry</servlet-name>
+        <servlet-class>flow.subflow.NINM.Retry</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_138">
+        <servlet-name>NM1</servlet-name>
+        <servlet-class>flow.NM1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_139">
+        <servlet-name>NM</servlet-name>
+        <servlet-class>flow.NM</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_148">
+        <servlet-name>NINM1</servlet-name>
+        <servlet-class>flow.NINM1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_166">
+        <servlet-name>ReadPropertyFile</servlet-name>
+        <servlet-class>flow.ReadPropertyFile</servlet-class>
+    </servlet>
+    
+    
+    
+    
+    <servlet-mapping id="avayadefaultdisconnecthandler-servletmapping">
+        <servlet-name>AvayaDefaultDisconnectHandler</servlet-name>
+        <url-pattern>/AvayaDefaultDisconnectHandler</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="avayadefaultexithandler-servletmapping">
+        <servlet-name>AvayaDefaultExitHandler</servlet-name>
+        <url-pattern>/AvayaDefaultExitHandler</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="avayasessiontermination-servletmapping">
+        <servlet-name>AvayaSessionTerminationServlet</servlet-name>
+        <url-pattern>/AvayaSessionTerminationServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="CheckAdminVariableInfo-servletmapping">
+        <servlet-name>CheckAdminVariableInfoServlet</servlet-name>
+        <url-pattern>/CheckAdminVariableInfo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="avayareturnerrorhandler-servletmapping">
+        <servlet-name>AvayaReturnErrorHandler</servlet-name>
+        <url-pattern>/AvayaReturnErrorHandler</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="avayareturnerrorthrow-servletmapping">
+        <servlet-name>AvayaReturnErrorThrow</servlet-name>
+        <url-pattern>/AvayaReturnErrorThrow</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_1">
+        <servlet-name>AppRoot</servlet-name>
+        <url-pattern>/AppRoot</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_3">
+        <servlet-name>TTDetailsFetch</servlet-name>
+        <url-pattern>/TTDetailsFetch</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_8">
+        <servlet-name>QueryTTDetails</servlet-name>
+        <url-pattern>/QueryTTDetails</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_13">
+        <servlet-name>CheckTTLevel</servlet-name>
+        <url-pattern>/CheckTTLevel</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_0">
+        <servlet-name>Start</servlet-name>
+        <url-pattern>/Start</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_21">
+        <servlet-name>end</servlet-name>
+        <url-pattern>/end</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ApiFailure_1">
+        <servlet-name>ApiFailure-Begin</servlet-name>
+        <url-pattern>/ApiFailure-Begin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ApiFailure_4">
+        <servlet-name>ApiFailure-Announce1</servlet-name>
+        <url-pattern>/ApiFailure-Announce1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ApiFailure_9">
+        <servlet-name>ApiFailure-end</servlet-name>
+        <url-pattern>/ApiFailure-end</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_29">
+        <servlet-name>ApiFail</servlet-name>
+        <url-pattern>/ApiFail</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_68">
+        <servlet-name>MenuForValid</servlet-name>
+        <url-pattern>/MenuForValid</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_70">
+        <servlet-name>MenuForNotValid</servlet-name>
+        <url-pattern>/MenuForNotValid</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_TTSolved_NotSolved_1">
+        <servlet-name>TTSolved_NotSolved-Begin</servlet-name>
+        <url-pattern>/TTSolved_NotSolved-Begin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_TTSolved_NotSolved_4">
+        <servlet-name>TTSolved_NotSolved-Data1</servlet-name>
+        <url-pattern>/TTSolved_NotSolved-Data1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_TTSolved_NotSolved_9">
+        <servlet-name>TTSolved_NotSolved-Announce1</servlet-name>
+        <url-pattern>/TTSolved_NotSolved-Announce1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_TTSolved_NotSolved_14">
+        <servlet-name>TTSolved_NotSolved-End</servlet-name>
+        <url-pattern>/TTSolved_NotSolved-End</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_84">
+        <servlet-name>TTSolved_NotSolved</servlet-name>
+        <url-pattern>/TTSolved_NotSolved</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_TimeCheck_1">
+        <servlet-name>TimeCheck-Begin</servlet-name>
+        <url-pattern>/TimeCheck-Begin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_TimeCheck_4">
+        <servlet-name>TimeCheck-Announce1</servlet-name>
+        <url-pattern>/TimeCheck-Announce1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_TimeCheck_9">
+        <servlet-name>TimeCheck-end</servlet-name>
+        <url-pattern>/TimeCheck-end</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_RequestCallBack_1">
+        <servlet-name>RequestCallBack-Begin</servlet-name>
+        <url-pattern>/RequestCallBack-Begin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_RequestCallBack_4">
+        <servlet-name>RequestCallBack-Announce1</servlet-name>
+        <url-pattern>/RequestCallBack-Announce1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_RequestCallBack_11">
+        <servlet-name>RequestCallBack-end</servlet-name>
+        <url-pattern>/RequestCallBack-end</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_98">
+        <servlet-name>RequestCallBack</servlet-name>
+        <url-pattern>/RequestCallBack</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_92">
+        <servlet-name>TimeCheck</servlet-name>
+        <url-pattern>/TimeCheck</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_127">
+        <servlet-name>NINM</servlet-name>
+        <url-pattern>/NINM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_NINM_1">
+        <servlet-name>NINM-Begin</servlet-name>
+        <url-pattern>/NINM-Begin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_NINM_4">
+        <servlet-name>NINM-CheckNIOrNM</servlet-name>
+        <url-pattern>/NINM-CheckNIOrNM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_NINM_17">
+        <servlet-name>NINM-NM</servlet-name>
+        <url-pattern>/NINM-NM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_NINM_12">
+        <servlet-name>NINM-NI</servlet-name>
+        <url-pattern>/NINM-NI</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_NINM_32">
+        <servlet-name>NINM-End</servlet-name>
+        <url-pattern>/NINM-End</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_NINM_33">
+        <servlet-name>NINM-Exceeded</servlet-name>
+        <url-pattern>/NINM-Exceeded</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_NINM_40">
+        <servlet-name>NINM-ExceededP</servlet-name>
+        <url-pattern>/NINM-ExceededP</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_NINM_31">
+        <servlet-name>NINM-Retry</servlet-name>
+        <url-pattern>/NINM-Retry</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_138">
+        <servlet-name>NM1</servlet-name>
+        <url-pattern>/NM1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_139">
+        <servlet-name>NM</servlet-name>
+        <url-pattern>/NM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_148">
+        <servlet-name>NINM1</servlet-name>
+        <url-pattern>/NINM1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_166">
+        <servlet-name>ReadPropertyFile</servlet-name>
+        <url-pattern>/ReadPropertyFile</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    
+</web-app>

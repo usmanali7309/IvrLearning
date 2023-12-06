@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@1952612086:1698478069335" name="LoadMenu2" version="6.0.1">
+<config>
+<source type="Class">com.dynamic.MenuLoader</source>
+</config>
+</action>

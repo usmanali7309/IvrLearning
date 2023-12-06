@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@2052994003:1698663911440" name="Call_06" version="6.0.1">
+<subflow_call subflow_name="NMCount" target="Element@31:1698663924327">
+<config>
+<input_data>
+<data name="count"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

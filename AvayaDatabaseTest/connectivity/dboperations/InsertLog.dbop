@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<DbOp version="1.0">
+    <Datasource name="LogDb"/>
+    <DbObject name="dbo.logs" returntype="-1" selectall="false" type="table">
+        <DbObjectParam datatype="12" function="" name="sessionId" sqltype="" tablename="logs" type="" typename="VARCHAR" variable="sessionId"/>
+        <DbObjectParam datatype="12" function="" name="ani" sqltype="" tablename="logs" type="" typename="VARCHAR" variable="aniTest"/>
+        <DbObjectParam datatype="12" function="" name="dnis" sqltype="" tablename="logs" type="" typename="VARCHAR" variable="dnisTest"/>
+        <DbObjectParam datatype="93" function="" name="time" sqltype="" tablename="logs" type="" typename="TIMESTAMP" variable="timeStamp"/>
+        <DbObjectParam datatype="12" field="input" function="" name="input" sqltype="" tablename="logs" type="" typename="VARCHAR" variable="UserInputs"/>
+    </DbObject>
+    <Operation name="Add"/>
+    <Clause>
+        <Where/>
+    </Clause>
+    <Clause>
+        <Order/>
+    </Clause>
+    <SQLQuery>INSERT INTO dbo.logs ( sessionId, ani, dnis, time, input ) VALUES ( ?, ?, ?, ?, ? )</SQLQuery>
+</DbOp>

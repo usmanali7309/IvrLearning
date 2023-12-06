@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<phraseset audiolocation="internal" filename="PhraseSet1" version="1.0">
+    <phrase version="1.0">
+        <displayname>NoInput</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>NINM_NOINPUT.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>NoMatch</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>NINM_NOMATCH.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>MaxTries</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>NINM_MAXTRY.wav</audiofile>
+    </phrase>
+</phraseset>

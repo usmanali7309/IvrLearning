@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<DbOp version="1.0">
+    <Datasource name="Db1"/>
+    <DbObject name="emp" returntype="-1" selectall="false" type="table">
+        <DbObjectParam datatype="4" field="empId" function="" name="empId" sqltype="" tablename="emp" type="" typename="INTEGER" variable="DbData"/>
+        <DbObjectParam datatype="12" field="Name" function="" name="Name" sqltype="" tablename="emp" type="" typename="VARCHAR" variable="DbData"/>
+        <DbObjectParam datatype="12" field="Email" function="" name="Email" sqltype="" tablename="emp" type="" typename="VARCHAR" variable="DbData"/>
+        <DbObjectParam datatype="12" field="Phone" function="" name="Phone" sqltype="" tablename="emp" type="" typename="VARCHAR" variable="DbData"/>
+    </DbObject>
+    <Operation name="Query">
+        <Qualifier name="distinct" value="false"/>
+    </Operation>
+    <Clause>
+        <Where>
+            <Condition name="Simple" type="Simple">
+                <Operand datatype="4" name="empId" tablename="emp" type="column" typename="INT"/>
+                <Operator type="Comparison" value="="/>
+                <Operand datatype="12" field="value" name="PromptAndCollect1" type="variable" typename=""/>
+            </Condition>
+        </Where>
+    </Clause>
+    <Clause>
+        <Order/>
+    </Clause>
+    <SQLQuery>SELECT emp.empId, emp.Name, emp.Email, emp.Phone FROM emp WHERE  ( emp.empId = ? )</SQLQuery>
+</DbOp>

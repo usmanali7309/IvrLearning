@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@467311030:1698735245033" name="DynamicMenuXml" version="6.0.1">
+<config>
+<dynamic base_config="true" type="URI">http://192.168.24.26:8080/CVP/CiscoLiveMenuConfig.xml</dynamic>
+<settings>
+<setting name="noinput_timeout">5s</setting>
+<setting name="max_noinput_count">3</setting>
+<setting name="max_nomatch_count">3</setting>
+<setting name="confidence_level">0.40</setting>
+<setting name="modal">false</setting>
+<setting name="option1_dtmf">*</setting>
+<setting name="option1_voice">undefined</setting>
+<setting name="option1_value">0</setting>
+<setting name="option2_dtmf">*</setting>
+<setting name="option2_voice">undefined</setting>
+<setting name="option2_value">0</setting>
+<setting name="option3_dtmf">*</setting>
+<setting name="option3_voice">undefined</setting>
+<setting name="option3_value">0</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="">
+<static default_audio_path="true" uri=""/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

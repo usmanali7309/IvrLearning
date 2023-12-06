@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<DbOp version="1.0">
+    <Datasource name="DbData"/>
+    <DbObject name="dbo.emp" returntype="-1" selectall="false" type="table">
+        <DbObjectParam datatype="4" field="value" function="" name="empId" sqltype="" tablename="emp" type="" typename="INTEGER" variable="EnterEmpId"/>
+        <DbObjectParam datatype="12" field="value" function="" name="Phone" sqltype="" tablename="emp" type="" typename="VARCHAR" variable="EnterMobileN"/>
+    </DbObject>
+    <Operation name="Update"/>
+    <Clause>
+        <Where>
+            <Condition name="Simple" type="Simple">
+                <Operand datatype="4" name="empId" tablename="dbo.emp" type="column" typename="int"/>
+                <Operator type="Comparison" value="="/>
+                <Operand datatype="12" field="value" name="EnterEmpId" type="variable" typename=""/>
+            </Condition>
+        </Where>
+    </Clause>
+    <Clause>
+        <Order/>
+    </Clause>
+    <SQLQuery>UPDATE dbo.emp SET empId = ? , Phone = ?  WHERE  ( emp.empId = ? )</SQLQuery>
+</DbOp>

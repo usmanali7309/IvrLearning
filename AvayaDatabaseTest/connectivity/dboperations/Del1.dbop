@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<DbOp version="1.0">
+    <Datasource name="DbData"/>
+    <DbObject name="dbo.emp" returntype="-1" selectall="false" type="table"/>
+    <Operation name="Delete"/>
+    <Clause>
+        <Where>
+            <Condition name="Simple" type="Simple">
+                <Operand datatype="4" name="empId" tablename="dbo.emp" type="column" typename="int"/>
+                <Operator type="Comparison" value="="/>
+                <Operand datatype="12" field="value" name="EnterEmpId" type="variable" typename=""/>
+            </Condition>
+        </Where>
+    </Clause>
+    <Clause>
+        <Order/>
+    </Clause>
+    <SQLQuery>DELETE FROM dbo.emp WHERE  ( emp.empId = ? )</SQLQuery>
+</DbOp>

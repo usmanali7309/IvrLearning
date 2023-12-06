@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<phraseset audiolocation="internal" filename="PhraseSet1" version="1.0">
+    <phrase version="1.0">
+        <displayname>NINM_MAXTRY</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>NINM_MAXTRY.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>NINM_NOINPUT</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>NINM_NOINPUT.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>NINM_NOMATCH</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>NINM_NOMATCH.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>Welcome</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>Welcome.wav</audiofile>
+    </phrase>
+</phraseset>

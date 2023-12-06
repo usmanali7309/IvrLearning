@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<phraseset audiolocation="external" filename="Test" version="1.0">
+    <phrase version="1.0">
+        <displayname>Welcome</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>Welcome.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>SALE_MENU</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>SALE_MENU.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>MAIN_MENU</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>MAIN_MENU.wav</audiofile>
+    </phrase>
+</phraseset>
