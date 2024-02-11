@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Global>
+
+    <LanguagePreferenceUrl>http://localhost:7080/api/language</LanguagePreferenceUrl>
+	<ChechAccountBalanceUrl>http://localhost:7080/api/accounts</ChechAccountBalanceUrl>
+	<ChangeAtmPinUrl>http://localhost:7080/api/atm</ChangeAtmPinUrl>
+	<SendValidateOtpUrl>http://localhost:7080/api/otp</SendValidateOtpUrl>	
+	<Time>1</Time>
+ 
+</Global>
+
+
+

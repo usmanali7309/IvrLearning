@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<phraseset audiolocation="external" filename="PhraseSet1" version="1.0">
+    <phrase version="1.0">
+        <displayname>AT</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>AT.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>ListenAgain</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>ListenAgain.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>Thank</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>Thank.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>TryAgain</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>TryAgain.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>Otp</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>Otp.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>ResendOtp</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>ResendOtp.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>AT1</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>AT1.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>PinNotMatching</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>PinNotMatching.wav</audiofile>
+    </phrase>
+</phraseset>

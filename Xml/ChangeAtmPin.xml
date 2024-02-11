@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding ="UTF-8" standalone="yes"?>
+<dynamicmenu>
+	<Entry>
+		<key>CAP</key>
+		<value>   
+		  <prompts bargein="true">CardNum</prompts>
+		  <grammars>NA</grammars>
+		  <nextnode>NN:CV</nextnode> 
+		  <menuId>NA</menuId>	  
+		  <menuDescription>NA</menuDescription>
+		  <noInput>NINM_NOINPUT</noInput>
+		  <noMatch>NINM_NOMATCH</noMatch>
+		  <maxTries NextNode="SF:Disconnect">NINM_MAXTRY</maxTries>         				
+		  <retry>3</retry>	  
+		</value>
+	</Entry>
+	<Entry>
+		<key>CV</key>
+		<value>   
+		  <prompts bargein="true">Cvv</prompts>
+		  <grammars>NA</grammars>
+		  <nextnode>NS:OTP</nextnode> 
+		  <menuId>NA</menuId>	  
+		  <menuDescription>NA</menuDescription>
+		  <noInput>NINM_NOINPUT</noInput>
+		  <noMatch>NINM_NOMATCH</noMatch>
+		  <maxTries NextNode="SF:Disconnect">NINM_MAXTRY</maxTries>         				
+		  <retry>3</retry>	  
+		</value>
+	</Entry>
+	
+	<Entry>
+		<key>OTP</key>
+		<value>   
+		  <prompts bargein="true">Otp</prompts>
+		  <grammars>NA</grammars>
+		  <nextnode>NN:NP</nextnode> 
+		  <menuId>NA</menuId>	  
+		  <menuDescription>NA</menuDescription>
+		  <noInput>NINM_NOINPUT</noInput>
+		  <noMatch>NINM_NOMATCH</noMatch>
+		  <maxTries NextNode="SF:Disconnect">NINM_MAXTRY</maxTries>         				
+		  <retry>3</retry>	  
+		</value>
+	</Entry>
+	
+	<Entry>
+		<key>NP</key>
+		<value>   
+		  <prompts bargein="true">NewPin</prompts>
+		  <grammars>NA</grammars>
+		  <nextnode>NN:CP</nextnode> 
+		  <menuId>NA</menuId>	  
+		  <menuDescription>NA</menuDescription>
+		  <noInput>NINM_NOINPUT</noInput>
+		  <noMatch>NINM_NOMATCH</noMatch>
+		  <maxTries NextNode="SF:Disconnect">NINM_MAXTRY</maxTries>         				
+		  <retry>3</retry>	  
+		</value>
+	</Entry>
+	<Entry>
+		<key>CP</key>
+		<value>   
+		  <prompts bargein="true">ConfirmPinNum</prompts>
+		  <grammars>NA</grammars>
+		  <nextnode>ANN:PCS</nextnode> 
+		  <menuId>NA</menuId>	  
+		  <menuDescription>NA</menuDescription>
+		  <noInput>NINM_NOINPUT</noInput>
+		  <noMatch>NINM_NOMATCH</noMatch>
+		  <maxTries NextNode="SF:Disconnect">NINM_MAXTRY</maxTries>         				
+		  <retry>3</retry>	  
+		</value>
+		</Entry>
+		<Entry>
+		<key>PCS</key>
+		<value>   
+		  <prompts bargein="true">PinChangedS</prompts>
+		  <grammars>NA</grammars>
+		  <nextnode>NM:GM</nextnode> 
+		  <menuId>NA</menuId>	  
+		  <menuDescription>NA</menuDescription>
+		  <noInput>NINM_NOINPUT</noInput>
+		  <noMatch>NINM_NOMATCH</noMatch>
+		  <maxTries NextNode="SF:Disconnect">NINM_MAXTRY</maxTries>         				
+		  <retry>3</retry>	  
+		</value>
+	</Entry>
+</dynamicmenu>	

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<phraseset audiolocation="external" filename="PhraseSet1" version="1.0">
+    <phrase version="1.0">
+        <displayname>Welcome</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>Welcome.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>AT</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>AT.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>ChangeAtmPin</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>ChangeAtmPin.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>CheckBalance</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>CheckBalance.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>ListenAgain</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>ListenAgain.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>NINM_MAXTRY</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>NINM_MAXTRY.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>NINM_NOINPUT</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>NINM_NOINPUT.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>NINM_NOMATCH</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>NINM_NOMATCH.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>Press</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>Press.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>press0</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>press0.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>press1</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>press1.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>press2</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>press2.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>press3</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>press3.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>press4</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>press4.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>press9</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>press9.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>press5</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>press5.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>press6</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>press6.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>press7</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>press7.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>press8</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>press8.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>pressStar</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>pressStar.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>Hindi</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>Hindi.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>English</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>English.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>Tamil</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>Tamil.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>pressHash</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>pressHash.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>Exit</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>Exit.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>Thank</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>Thank.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>TryAgain</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>TryAgain.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>Otp</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>Otp.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>ResendOtp</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>ResendOtp.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>EntAccountNum</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>EntAccountNum.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>EntCustomerId</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>EntCustomerId.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>AccountBal</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>AccountBal.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>AT1</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>AT1.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>CardNum</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>CardNum.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>Cvv</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>Cvv.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>NewPin</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>NewPin.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>ConfirmPinNum</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>ConfirmPinNum.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>PinChangedS</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>PinChangedS.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>ChangeLang</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>ChangeLang.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>PinNotMatching</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>PinNotMatching.wav</audiofile>
+    </phrase>
+</phraseset>

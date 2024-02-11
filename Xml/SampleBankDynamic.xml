@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding ="UTF-8" standalone="yes"?>
+<dynamicmenu>
+	<Entry>
+		<key>WE</key> 
+		<value>  
+		  <prompts bargein="true">Welcome</prompts>
+		  <grammars>NA</grammars>
+		  <nextnode>NM:MM</nextnode>
+		  <menuId>NA</menuId>
+		  <menuDescription>NA</menuDescription>
+		  <noInput>NA</noInput>
+		  <noMatch>NA</noMatch>
+		  <maxTries NextNode="SF:Disconnect">NA</maxTries>         				
+		  <retry>NA</retry>	  
+		</value>
+	 </Entry>
+	
+<!-- Language Preference SubFlow xml -->		 
+	 <Entry>
+		<key>LangPre</key> 
+		<value>  
+		  <prompts bargein="true">Hindi,Tamil,English,Exit</prompts>
+		  <grammars>1,2,3,#</grammars>
+		  <nextnode>NM:MM</nextnode>
+		  <menuId>002</menuId>
+		  <menuDescription>Language Menu</menuDescription>
+		  <noInput>NINM_NOINPUT</noInput>
+		  <noMatch>NINM_NOMATCH</noMatch>
+		  <maxTries NextNode="SF:Disconnect">NINM_MAXTRY</maxTries>         				
+		  <retry>3</retry>	   
+		</value>
+	 </Entry>
+<!-- Language Preference SubFlow xml End --> 
+	 
+	 <Entry>
+		<key>MM</key>
+		<value>   
+		  <prompts bargein="true">CheckBalance,ChangeAtmPin,ChangeLang,AT,ListenAgain</prompts>
+		  <grammars>1,2,3,9,*</grammars>
+		  <nextnode>NS:CAB,NS:CAP,NS:CL,NS:AT,LA:MM</nextnode> 
+		  <menuId>001</menuId>	  
+		  <menuDescription>Main Menu</menuDescription>
+		 <noInput>NINM_NOINPUT</noInput>
+		  <noMatch>NINM_NOMATCH</noMatch>
+		  <maxTries NextNode="SF:Disconnect">NINM_MAXTRY</maxTries>         				
+		  <retry>3</retry>	  
+		</value>
+	</Entry>
+	
+<!-- Check Account Balance SubFlow xml -->
+    <Entry>
+		<key>CAB</key>
+		<value>   
+		  <prompts bargein="true">EntAccountNum</prompts>
+		  <grammars>NA</grammars>
+		  <nextnode>NN:ECI</nextnode> 
+		  <menuId>NA</menuId>	  
+		  <menuDescription>NA</menuDescription>
+		  <noInput>NINM_NOINPUT</noInput>
+		  <noMatch>NINM_NOMATCH</noMatch>
+		  <maxTries NextNode="SF:Disconnect">NINM_MAXTRY</maxTries>         				
+		  <retry>3</retry>	  
+		</value>
+	</Entry>
+	<Entry>
+		<key>ECI</key>
+		<value>   
+		  <prompts bargein="true">EntCustomerId</prompts>
+		  <grammars>NA</grammars>
+		  <nextnode>NS:OTP</nextnode> 
+		  <menuId>NA</menuId>	  
+		  <menuDescription>NA</menuDescription>
+		  <noInput>NINM_NOINPUT</noInput>
+		  <noMatch>NINM_NOMATCH</noMatch>
+		  <maxTries NextNode="SF:Disconnect">NINM_NOMATCH</maxTries>         				
+		  <retry>3</retry>	  
+		</value>
+	</Entry>
+	
+	<Entry>
+		<key>OTP</key>
+		<value>   
+		  <prompts bargein="true">Otp</prompts>
+		  <grammars>NA</grammars>
+		  <nextnode>ANN:AB</nextnode> 
+		  <menuId>NA</menuId>	  
+		  <menuDescription>NA</menuDescription>
+		  <noInput>NINM_NOINPUT</noInput>
+		  <noMatch>NINM_NOMATCH</noMatch>
+		  <maxTries NextNode="SF:Disconnect">NINM_MAXTRY</maxTries>         				
+		  <retry>3</retry>	  
+		</value>
+	</Entry>
+	
+	<Entry>
+		<key>AB</key>
+		<value>   
+		  <prompts bargein="true">AccountBal</prompts>
+		  <grammars>NA</grammars>
+		  <nextnode>NM:GM</nextnode> 
+		  <menuId>NA</menuId>	  
+		  <menuDescription>NA</menuDescription>
+		  <noInput>NINM_NOINPUT</noInput>
+		  <noMatch>NINM_NOMATCH</noMatch>
+		  <maxTries NextNode="SF:Disconnect">NINM_MAXTRY</maxTries>         				
+		  <retry>3</retry>	  
+		</value>
+	</Entry>
+<!-- Check Account Balance SubFlow Xml End -->
+
+<!-- Global Menu SubFlow Xml -->
+      <Entry>
+		<key>GM</key>
+		<value>   
+		  <prompts bargein="true">MainMenu,Exit</prompts>
+		  <grammars>0,#</grammars>
+		  <nextnode>NM:MM,NN:END</nextnode> 
+		  <menuId>003</menuId>	  
+		  <menuDescription>Global Menu</menuDescription>
+		  <noInput>NINM_NOINPUT</noInput>
+		  <noMatch>NINM_NOMATCH</noMatch>
+		  <maxTries NextNode="SF:Disconnect">NINM_MAXTRY</maxTries>         				
+		  <retry>3</retry>	  
+		</value>
+	</Entry>
+<!-- Global Menu SubFlow Xml End-->
+
+   <Entry>
+		<key>AT</key>
+		<value>   
+		  <prompts bargein="true">AT1</prompts>
+		  <grammars>NA</grammars>
+		  <nextnode>NM:MM</nextnode> 
+		  <menuId>NA</menuId>	  
+		  <menuDescription>NA</menuDescription>
+		  <noInput>NINM_NOINPUT</noInput>
+		  <noMatch>NINM_NOMATCH</noMatch>
+		  <maxTries NextNode="SF:Disconnect">NINM_MAXTRY</maxTries>         				
+		  <retry>3</retry>	  
+		</value>
+	</Entry>
+	
+	
+</dynamicmenu>	

@@ -1,0 +1,1357 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+This XML descriptor is automatically generated and managed by the
+application development environment.  While manual updates to this 
+file may be preserved, it is best to manage this file through the application development environment tool.
+
+Copyright 2004-2019 Avaya Inc.
+--><!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app id="WebApp_ID">
+    <context-param>
+        <param-name>sage.startlanguage</param-name>
+        <param-value>english</param-value>
+        <description>The starting language for the application.</description>
+    </context-param>
+    <context-param>
+        <param-name>sage.ic.throwexceptions</param-name>
+        <param-value>true</param-value>
+        <description>IC Throw Runtime Exception on Error{true|false}</description>
+    </context-param>
+    <context-param>
+        <param-name>sage.cti.autoinvoke.callinfo</param-name>
+        <param-value>true</param-value>
+        <description>CTI Auto invoke CallInfo upon app start{true|false}</description>
+    </context-param>
+    <context-param>
+        <param-name>runtime-ASR</param-name>
+        <param-value>Desktop Microsoft Speech SAPI</param-value>
+        <description>Runtime ASR {SRGS-Literals|SRGS-SISR|Nuance OSR|IBM|...}</description>
+    </context-param>
+    <context-param>
+        <param-name>runtime-SSML</param-name>
+        <param-value>true</param-value>
+        <description>Runtime SSML Generation {true|false} - "true" enables SSML generation, "false" disables.</description>
+    </context-param>
+    <context-param>
+        <param-name>runtime-nature</param-name>
+        <param-value>speech</param-value>
+        <description>Application nature, speech or message</description>
+    </context-param>
+    <context-param>
+        <param-name>runtime-Platform</param-name>
+        <param-value>Desktop</param-value>
+        <description>Runtime Platform {Desktop|Experience Portal|Other|IR|MPS}</description>
+    </context-param>
+    <context-param>
+        <param-name>runtime-VXML-Compatibility</param-name>
+        <param-value>2.1</param-value>
+        <description>2.1 + IVVR, 2.1 Allows VXML 2.1 extensions, 2.0 Uses VXML 2.0 Only</description>
+    </context-param>
+    <context-param>
+        <param-name>runtime-DTMF-Native</param-name>
+        <param-value>LOCAL_SRGS_LITERALS</param-value>
+        <description>(NATIVE|LOCAL_SRGS_SISR|LOCAL_SRGS_LITERALS, NATIVE means DTMF Grammars are in native asr format.</description>
+    </context-param>
+    <context-param>
+        <param-name>allow-html-mode</param-name>
+        <param-value>false</param-value>
+        <description>Allows html mode in speech applications.</description>
+    </context-param>
+    <context-param>
+        <param-name>CollectionSeparator</param-name>
+        <param-value>|</param-value>
+        <description>Collection Separator Char</description>
+    </context-param>
+    <context-param>
+        <param-name>grammar-caching</param-name>
+        <param-value>none</param-value>
+        <description>Grammar caching mode, none=no caching, default=system default or property setting</description>
+    </context-param>
+    <context-param>
+        <param-name>PromptFile</param-name>
+        <param-value>http://localhost:8080/SampleBankingAudio/</param-value>
+    </context-param>
+    <context-param>
+        <param-name>english.phraseset.PhraseSet1.urlbase</param-name>
+        <param-value>/SampleBankingAudio/</param-value>
+    </context-param>
+    <context-param>
+        <param-name>XmlPath</param-name>
+        <param-value>E:/SampleBankingXml/</param-value>
+    </context-param>
+    <context-param>
+        <param-name>SampleBankDynamic</param-name>
+        <param-value>SampleBankDynamic.xml</param-value>
+    </context-param>
+    
+    
+    <context-param>
+        <param-name>ChangeAtmPin</param-name>
+        <param-value>ChangeAtmPin.xml</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ApiUrl</param-name>
+        <param-value>ApiUrl.xml</param-value>
+    </context-param>
+    <servlet id="avayadefaultdisconnecthandler-servlet">
+        <servlet-name>AvayaDefaultDisconnectHandler</servlet-name>
+        <servlet-class>com.avaya.sce.runtime.DefaultDisconnect</servlet-class>
+    </servlet>
+    <servlet id="avayadefaultexithandler-servlet">
+        <servlet-name>AvayaDefaultExitHandler</servlet-name>
+        <servlet-class>com.avaya.sce.runtime.DefaultExit</servlet-class>
+    </servlet>
+    <servlet id="avayasessiontermination-servlet">
+        <servlet-name>AvayaSessionTerminationServlet</servlet-name>
+        <servlet-class>com.avaya.sce.runtime.AvayaSessionTerminationServlet</servlet-class>
+    </servlet>
+    <servlet id="CheckAdminVariableInfo-servlet">
+        <servlet-name>CheckAdminVariableInfoServlet</servlet-name>
+        <servlet-class>com.avaya.sce.runtimecommon.CheckAdminVariableInfo</servlet-class>
+    </servlet>
+    <servlet id="avayareturnerrorhandler-servlet">
+        <servlet-name>AvayaReturnErrorHandler</servlet-name>
+        <servlet-class>com.avaya.sce.runtime.ReturnErrorHandlerServlet</servlet-class>
+    </servlet>
+    <servlet id="avayareturnerrorthrow-servlet">
+        <servlet-name>AvayaReturnErrorThrow</servlet-name>
+        <servlet-class>com.avaya.sce.runtime.ReturnErrorThrowServlet</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_1">
+        <servlet-name>AppRoot</servlet-name>
+        <servlet-class>flow.AppRoot</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_3">
+        <servlet-name>Stp</servlet-name>
+        <servlet-class>flow.Stp</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_7">
+        <servlet-name>Greeting</servlet-name>
+        <servlet-class>flow.Greeting</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_0">
+        <servlet-name>Start</servlet-name>
+        <servlet-class>flow.Start</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_12">
+        <servlet-name>End</servlet-name>
+        <servlet-class>flow.End</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_36">
+        <servlet-name>LangPre</servlet-name>
+        <servlet-class>flow.LangPre</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_23">
+        <servlet-name>CheckLanguageSet</servlet-name>
+        <servlet-class>flow.CheckLanguageSet</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_LanguagePreference_1">
+        <servlet-name>LanguagePreference-Begin</servlet-name>
+        <servlet-class>flow.subflow.LanguagePreference.Begin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_LanguagePreference_4">
+        <servlet-name>LanguagePreference-Return</servlet-name>
+        <servlet-class>flow.subflow.LanguagePreference.Return</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_43">
+        <servlet-name>MainMenu</servlet-name>
+        <servlet-class>flow.MainMenu</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_49">
+        <servlet-name>MainManuPr</servlet-name>
+        <servlet-class>flow.MainManuPr</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_67">
+        <servlet-name>UserInput</servlet-name>
+        <servlet-class>flow.UserInput</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_1">
+        <servlet-name>CheckAccountBalance-Begin</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.Begin</servlet-class>
+    </servlet>
+    
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_6">
+        <servlet-name>CheckAccountBalance-End</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.End</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_1">
+        <servlet-name>ChangePin-Begin</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.Begin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_4">
+        <servlet-name>ChangePin-End</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.End</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_AT_1">
+        <servlet-name>AT-Begin</servlet-name>
+        <servlet-class>flow.subflow.AT.Begin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_AT_4">
+        <servlet-name>AT-End</servlet-name>
+        <servlet-class>flow.subflow.AT.End</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_97">
+        <servlet-name>UpdateLang</servlet-name>
+        <servlet-class>flow.UpdateLang</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_86">
+        <servlet-name>CheckBalance</servlet-name>
+        <servlet-class>flow.CheckBalance</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_91">
+        <servlet-name>ChangePin</servlet-name>
+        <servlet-class>flow.ChangePin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_103">
+        <servlet-name>AT</servlet-name>
+        <servlet-class>flow.AT</servlet-class>
+    </servlet>
+    
+    <servlet id="SAGE-callflow-servlet_LanguagePreference_10">
+        <servlet-name>LanguagePreference-LangMenu</servlet-name>
+        <servlet-class>flow.subflow.LanguagePreference.LangMenu</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_LanguagePreference_16">
+        <servlet-name>LanguagePreference-LangMenuPr</servlet-name>
+        <servlet-class>flow.subflow.LanguagePreference.LangMenuPr</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_LanguagePreference_34">
+        <servlet-name>LanguagePreference-CheckSetOrUpdate</servlet-name>
+        <servlet-class>flow.subflow.LanguagePreference.CheckSetOrUpdate</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_LanguagePreference_60">
+        <servlet-name>LanguagePreference-SetLanguage</servlet-name>
+        <servlet-class>flow.subflow.LanguagePreference.SetLanguage</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_LanguagePreference_68">
+        <servlet-name>LanguagePreference-UpdateLanguage</servlet-name>
+        <servlet-class>flow.subflow.LanguagePreference.UpdateLanguage</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_112">
+        <servlet-name>changeLang</servlet-name>
+        <servlet-class>flow.changeLang</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_LanguagePreference_142">
+        <servlet-name>LanguagePreference-CheckFCount</servlet-name>
+        <servlet-class>flow.subflow.LanguagePreference.CheckFCount</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_LanguagePreference_149">
+        <servlet-name>LanguagePreference-ResetFCnt</servlet-name>
+        <servlet-class>flow.subflow.LanguagePreference.ResetFCnt</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_LanguagePreference_154">
+        <servlet-name>LanguagePreference-TryAgainAnn</servlet-name>
+        <servlet-class>flow.subflow.LanguagePreference.TryAgainAnn</servlet-class>
+    </servlet>
+    
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_13">
+        <servlet-name>CheckAccountBalance-CABdata</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.CABdata</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_19">
+        <servlet-name>CheckAccountBalance-EntAccountNum</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.EntAccountNum</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_32">
+        <servlet-name>CheckAccountBalance-EntCustId</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.EntCustId</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_54">
+        <servlet-name>CheckAccountBalance-ECIData</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.ECIData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_171">
+        <servlet-name>CheckAccountBalance-FetchAccountBal</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.FetchAccountBal</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_174">
+        <servlet-name>CheckAccountBalance-ResetFCnt1</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.ResetFCnt1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_180">
+        <servlet-name>CheckAccountBalance-ApiFl</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.ApiFl</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_226">
+        <servlet-name>CheckAccountBalance-ApiFC</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.ApiFC</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_234">
+        <servlet-name>CheckAccountBalance-ExceededP</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.ExceededP</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_239">
+        <servlet-name>CheckAccountBalance-ResetFCnt</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.ResetFCnt</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_222">
+        <servlet-name>CheckAccountBalance-TryAgain</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.TryAgain</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_251">
+        <servlet-name>CheckAccountBalance-AnnBal</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.AnnBal</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_255">
+        <servlet-name>CheckAccountBalance-ABData</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.ABData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_1">
+        <servlet-name>SendValidateOtp-Begin</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.Begin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_225">
+        <servlet-name>SendValidateOtp-NINM</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.NINM</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_196">
+        <servlet-name>SendValidateOtp-ResetCnt1</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.ResetCnt1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_168">
+        <servlet-name>SendValidateOtp-ResetFCnt1</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.ResetFCnt1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_202">
+        <servlet-name>SendValidateOtp-ResetCnt</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.ResetCnt</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_208">
+        <servlet-name>SendValidateOtp-ApiFCount</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.ApiFCount</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_177">
+        <servlet-name>SendValidateOtp-SendOptApi</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.SendOptApi</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_184">
+        <servlet-name>SendValidateOtp-Failed</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.Failed</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_216">
+        <servlet-name>SendValidateOtp-ResetFCnt</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.ResetFCnt</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_185">
+        <servlet-name>SendValidateOtp-Success</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.Success</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_186">
+        <servlet-name>SendValidateOtp-EntOpt</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.EntOpt</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_221">
+        <servlet-name>SendValidateOtp-ResendOtp</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.ResendOtp</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_263">
+        <servlet-name>SendValidateOtp-ResetFCnt2</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.ResetFCnt2</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_269">
+        <servlet-name>SendValidateOtp-ReEnterOtp</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.ReEnterOtp</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_273">
+        <servlet-name>SendValidateOtp-ResetFCnt3</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.ResetFCnt3</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_247">
+        <servlet-name>SendValidateOtp-ValidateOtp</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.ValidateOtp</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_255">
+        <servlet-name>SendValidateOtp-ApiFCount1</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.ApiFCount1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_262">
+        <servlet-name>CheckAccountBalance-SendValidateOtp</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.SendValidateOtp</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_NINM_1">
+        <servlet-name>NINM-Begin</servlet-name>
+        <servlet-class>flow.subflow.NINM.Begin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_NINM_105">
+        <servlet-name>NINM-CkeckNINM</servlet-name>
+        <servlet-class>flow.subflow.NINM.CkeckNINM</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_NINM_112">
+        <servlet-name>NINM-Exceeded</servlet-name>
+        <servlet-class>flow.subflow.NINM.Exceeded</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_NINM_116">
+        <servlet-name>NINM-NIPrompt</servlet-name>
+        <servlet-class>flow.subflow.NINM.NIPrompt</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_NINM_86">
+        <servlet-name>NINM-NMPrompt</servlet-name>
+        <servlet-class>flow.subflow.NINM.NMPrompt</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_NINM_120">
+        <servlet-name>NINM-Retry</servlet-name>
+        <servlet-class>flow.subflow.NINM.Retry</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_NINM_121">
+        <servlet-name>NINM-end</servlet-name>
+        <servlet-class>flow.subflow.NINM.end</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_NINM_90">
+        <servlet-name>NINM-NM</servlet-name>
+        <servlet-class>flow.subflow.NINM.NM</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_NINM_122">
+        <servlet-name>NINM-NI</servlet-name>
+        <servlet-class>flow.subflow.NINM.NI</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_131">
+        <servlet-name>NI_NM</servlet-name>
+        <servlet-class>flow.NI_NM</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_119">
+        <servlet-name>NINM</servlet-name>
+        <servlet-class>flow.NINM</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_LanguagePreference_167">
+        <servlet-name>LanguagePreference-NINM</servlet-name>
+        <servlet-class>flow.subflow.LanguagePreference.NINM</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_LanguagePreference_178">
+        <servlet-name>LanguagePreference-NI_NM</servlet-name>
+        <servlet-class>flow.subflow.LanguagePreference.NI_NM</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_293">
+        <servlet-name>SendValidateOtp-NI_NM</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.NI_NM</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_6">
+        <servlet-name>ChangePin-CAPData</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.CAPData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_11">
+        <servlet-name>ChangePin-EntCardNum</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.EntCardNum</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_24">
+        <servlet-name>ChangePin-NINM</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.NINM</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_35">
+        <servlet-name>ChangePin-NI_NM</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.NI_NM</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_49">
+        <servlet-name>ChangePin-EntCvv</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.EntCvv</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_44">
+        <servlet-name>ChangePin-CvData</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.CvData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_73">
+        <servlet-name>ChangePin-NI_NM1</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.NI_NM1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_62">
+        <servlet-name>ChangePin-NINM1</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.NINM1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_450">
+        <servlet-name>ChangePin-ResetFCnt1</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.ResetFCnt1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_455">
+        <servlet-name>ChangePin-ApiFl</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.ApiFl</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_463">
+        <servlet-name>ChangePin-FetchRegisterNum</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.FetchRegisterNum</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_467">
+        <servlet-name>ChangePin-ResetFCnt</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.ResetFCnt</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_472">
+        <servlet-name>ChangePin-TryAgain</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.TryAgain</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_477">
+        <servlet-name>ChangePin-ExceededP</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.ExceededP</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_481">
+        <servlet-name>ChangePin-ApiFC</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.ApiFC</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_498">
+        <servlet-name>ChangePin-SendValidateOtp</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.SendValidateOtp</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_504">
+        <servlet-name>ChangePin-NPData</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.NPData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_509">
+        <servlet-name>ChangePin-EntNewPin</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.EntNewPin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_522">
+        <servlet-name>ChangePin-NINM2</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.NINM2</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_533">
+        <servlet-name>ChangePin-NI_NM2</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.NI_NM2</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_542">
+        <servlet-name>ChangePin-ValidateNewAndOldPin</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.ValidateNewAndOldPin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_552">
+        <servlet-name>ChangePin-AnnSamePin</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.AnnSamePin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_556">
+        <servlet-name>ChangePin-Retry</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.Retry</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_569">
+        <servlet-name>ChangePin-ResetCnt3</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.ResetCnt3</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_578">
+        <servlet-name>ChangePin-CPData</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.CPData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_582">
+        <servlet-name>ChangePin-EntConfirmPin</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.EntConfirmPin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_595">
+        <servlet-name>ChangePin-NINM3</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.NINM3</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_606">
+        <servlet-name>ChangePin-NI_NM3</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.NI_NM3</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_615">
+        <servlet-name>ChangePin-ResetCnt4</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.ResetCnt4</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_622">
+        <servlet-name>ChangePin-CheckNewAndConfirmPin</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.CheckNewAndConfirmPin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_629">
+        <servlet-name>ChangePin-AnnPinNotMatch</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.AnnPinNotMatch</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_635">
+        <servlet-name>ChangePin-CheckRetry</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.CheckRetry</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_652">
+        <servlet-name>ChangePin-TryAgain1</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.TryAgain1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_656">
+        <servlet-name>ChangePin-ApiR</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.ApiR</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_663">
+        <servlet-name>ChangePin-ApiFC1</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.ApiFC1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_671">
+        <servlet-name>ChangePin-ResetFCnt2</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.ResetFCnt2</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_676">
+        <servlet-name>ChangePin-ResetFCnt3</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.ResetFCnt3</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_681">
+        <servlet-name>ChangePin-PinChangeApi</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.PinChangeApi</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_684">
+        <servlet-name>ChangePin-AnnPinChanged</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.AnnPinChanged</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_GlobalMenu_1">
+        <servlet-name>GlobalMenu-Begin</servlet-name>
+        <servlet-class>flow.subflow.GlobalMenu.Begin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_GlobalMenu_4">
+        <servlet-name>GlobalMenu-GMData</servlet-name>
+        <servlet-class>flow.subflow.GlobalMenu.GMData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_GlobalMenu_9">
+        <servlet-name>GlobalMenu-GlobalMenu</servlet-name>
+        <servlet-class>flow.subflow.GlobalMenu.GlobalMenu</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_270">
+        <servlet-name>CheckAccountBalance-NINM</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.NINM</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_282">
+        <servlet-name>CheckAccountBalance-NI_NM</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.NI_NM</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_291">
+        <servlet-name>CheckAccountBalance-NI_NM1</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.NI_NM1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_296">
+        <servlet-name>CheckAccountBalance-NINM1</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.NINM1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_GlobalMenu_23">
+        <servlet-name>GlobalMenu-NI_NM</servlet-name>
+        <servlet-class>flow.subflow.GlobalMenu.NI_NM</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_GlobalMenu_28">
+        <servlet-name>GlobalMenu-NINM</servlet-name>
+        <servlet-class>flow.subflow.GlobalMenu.NINM</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_GlobalMenu_43">
+        <servlet-name>GlobalMenu-End</servlet-name>
+        <servlet-class>flow.subflow.GlobalMenu.End</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_GlobalMenu_44">
+        <servlet-name>GlobalMenu-MainMenu</servlet-name>
+        <servlet-class>flow.subflow.GlobalMenu.MainMenu</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_310">
+        <servlet-name>CheckAccountBalance-GlobalMenu</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.GlobalMenu</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_316">
+        <servlet-name>CheckAccountBalance-MainMenu</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.MainMenu</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_GlobalMenu_47">
+        <servlet-name>GlobalMenu-MenuInput</servlet-name>
+        <servlet-class>flow.subflow.GlobalMenu.MenuInput</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_GlobalMenu_59">
+        <servlet-name>GlobalMenu-ResetCnt</servlet-name>
+        <servlet-class>flow.subflow.GlobalMenu.ResetCnt</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_142">
+        <servlet-name>ResetCnt</servlet-name>
+        <servlet-class>flow.ResetCnt</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_319">
+        <servlet-name>CheckAccountBalance-ResetCnt</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.ResetCnt</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_327">
+        <servlet-name>CheckAccountBalance-ResetCnt1</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.ResetCnt1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_CheckAccountBalance_335">
+        <servlet-name>CheckAccountBalance-ResetCnt2</servlet-name>
+        <servlet-class>flow.subflow.CheckAccountBalance.ResetCnt2</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_699">
+        <servlet-name>ChangePin-ResetCnt</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.ResetCnt</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_707">
+        <servlet-name>ChangePin-ResetCnt1</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.ResetCnt1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_715">
+        <servlet-name>ChangePin-ResetCnt2</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.ResetCnt2</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_724">
+        <servlet-name>ChangePin-MainMenu</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.MainMenu</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_725">
+        <servlet-name>ChangePin-GlobalMenu</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.GlobalMenu</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_LanguagePreference_187">
+        <servlet-name>LanguagePreference-ResetCnt</servlet-name>
+        <servlet-class>flow.subflow.LanguagePreference.ResetCnt</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_LanguagePreference_195">
+        <servlet-name>LanguagePreference-ResetCnt1</servlet-name>
+        <servlet-class>flow.subflow.LanguagePreference.ResetCnt1</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_153">
+        <servlet-name>loadD</servlet-name>
+        <servlet-class>flow.loadD</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_LanguagePreference_203">
+        <servlet-name>LanguagePreference-ChechInput</servlet-name>
+        <servlet-class>flow.subflow.LanguagePreference.ChechInput</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_LanguagePreference_215">
+        <servlet-name>LanguagePreference-End</servlet-name>
+        <servlet-class>flow.subflow.LanguagePreference.End</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_AT_6">
+        <servlet-name>AT-AT</servlet-name>
+        <servlet-class>flow.subflow.AT.AT</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_AT_12">
+        <servlet-name>AT-ATD</servlet-name>
+        <servlet-class>flow.subflow.AT.ATD</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_301">
+        <servlet-name>SendValidateOtp-OtpData</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.OtpData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_ChangePin_733">
+        <servlet-name>ChangePin-AsF</servlet-name>
+        <servlet-class>flow.subflow.ChangePin.AsF</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SendValidateOtp_308">
+        <servlet-name>SendValidateOtp-EP</servlet-name>
+        <servlet-class>flow.subflow.SendValidateOtp.EP</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_176">
+        <servlet-name>EndReason</servlet-name>
+        <servlet-class>flow.EndReason</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_187">
+        <servlet-name>Hangup</servlet-name>
+        <servlet-class>flow.Hangup</servlet-class>
+    </servlet>
+    <servlet-mapping id="avayadefaultdisconnecthandler-servletmapping">
+        <servlet-name>AvayaDefaultDisconnectHandler</servlet-name>
+        <url-pattern>/AvayaDefaultDisconnectHandler</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="avayadefaultexithandler-servletmapping">
+        <servlet-name>AvayaDefaultExitHandler</servlet-name>
+        <url-pattern>/AvayaDefaultExitHandler</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="avayasessiontermination-servletmapping">
+        <servlet-name>AvayaSessionTerminationServlet</servlet-name>
+        <url-pattern>/AvayaSessionTerminationServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="CheckAdminVariableInfo-servletmapping">
+        <servlet-name>CheckAdminVariableInfoServlet</servlet-name>
+        <url-pattern>/CheckAdminVariableInfo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="avayareturnerrorhandler-servletmapping">
+        <servlet-name>AvayaReturnErrorHandler</servlet-name>
+        <url-pattern>/AvayaReturnErrorHandler</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="avayareturnerrorthrow-servletmapping">
+        <servlet-name>AvayaReturnErrorThrow</servlet-name>
+        <url-pattern>/AvayaReturnErrorThrow</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_1">
+        <servlet-name>AppRoot</servlet-name>
+        <url-pattern>/AppRoot</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_3">
+        <servlet-name>Stp</servlet-name>
+        <url-pattern>/Stp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_7">
+        <servlet-name>Greeting</servlet-name>
+        <url-pattern>/Greeting</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_0">
+        <servlet-name>Start</servlet-name>
+        <url-pattern>/Start</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_12">
+        <servlet-name>End</servlet-name>
+        <url-pattern>/End</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_36">
+        <servlet-name>LangPre</servlet-name>
+        <url-pattern>/LangPre</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_23">
+        <servlet-name>CheckLanguageSet</servlet-name>
+        <url-pattern>/CheckLanguageSet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_LanguagePreference_1">
+        <servlet-name>LanguagePreference-Begin</servlet-name>
+        <url-pattern>/LanguagePreference-Begin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_LanguagePreference_4">
+        <servlet-name>LanguagePreference-Return</servlet-name>
+        <url-pattern>/LanguagePreference-Return</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_43">
+        <servlet-name>MainMenu</servlet-name>
+        <url-pattern>/MainMenu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_49">
+        <servlet-name>MainManuPr</servlet-name>
+        <url-pattern>/MainManuPr</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_67">
+        <servlet-name>UserInput</servlet-name>
+        <url-pattern>/UserInput</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_1">
+        <servlet-name>CheckAccountBalance-Begin</servlet-name>
+        <url-pattern>/CheckAccountBalance-Begin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_6">
+        <servlet-name>CheckAccountBalance-End</servlet-name>
+        <url-pattern>/CheckAccountBalance-End</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_1">
+        <servlet-name>ChangePin-Begin</servlet-name>
+        <url-pattern>/ChangePin-Begin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_4">
+        <servlet-name>ChangePin-End</servlet-name>
+        <url-pattern>/ChangePin-End</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_AT_1">
+        <servlet-name>AT-Begin</servlet-name>
+        <url-pattern>/AT-Begin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_AT_4">
+        <servlet-name>AT-End</servlet-name>
+        <url-pattern>/AT-End</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_97">
+        <servlet-name>UpdateLang</servlet-name>
+        <url-pattern>/UpdateLang</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_86">
+        <servlet-name>CheckBalance</servlet-name>
+        <url-pattern>/CheckBalance</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_91">
+        <servlet-name>ChangePin</servlet-name>
+        <url-pattern>/ChangePin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_103">
+        <servlet-name>AT</servlet-name>
+        <url-pattern>/AT</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping id="SAGE-callflow-servletmapping_LanguagePreference_10">
+        <servlet-name>LanguagePreference-LangMenu</servlet-name>
+        <url-pattern>/LanguagePreference-LangMenu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_LanguagePreference_16">
+        <servlet-name>LanguagePreference-LangMenuPr</servlet-name>
+        <url-pattern>/LanguagePreference-LangMenuPr</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_LanguagePreference_34">
+        <servlet-name>LanguagePreference-CheckSetOrUpdate</servlet-name>
+        <url-pattern>/LanguagePreference-CheckSetOrUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_LanguagePreference_60">
+        <servlet-name>LanguagePreference-SetLanguage</servlet-name>
+        <url-pattern>/LanguagePreference-SetLanguage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_LanguagePreference_68">
+        <servlet-name>LanguagePreference-UpdateLanguage</servlet-name>
+        <url-pattern>/LanguagePreference-UpdateLanguage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_112">
+        <servlet-name>changeLang</servlet-name>
+        <url-pattern>/changeLang</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_LanguagePreference_142">
+        <servlet-name>LanguagePreference-CheckFCount</servlet-name>
+        <url-pattern>/LanguagePreference-CheckFCount</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_LanguagePreference_149">
+        <servlet-name>LanguagePreference-ResetFCnt</servlet-name>
+        <url-pattern>/LanguagePreference-ResetFCnt</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_LanguagePreference_154">
+        <servlet-name>LanguagePreference-TryAgainAnn</servlet-name>
+        <url-pattern>/LanguagePreference-TryAgainAnn</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_13">
+        <servlet-name>CheckAccountBalance-CABdata</servlet-name>
+        <url-pattern>/CheckAccountBalance-CABdata</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_19">
+        <servlet-name>CheckAccountBalance-EntAccountNum</servlet-name>
+        <url-pattern>/CheckAccountBalance-EntAccountNum</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_32">
+        <servlet-name>CheckAccountBalance-EntCustId</servlet-name>
+        <url-pattern>/CheckAccountBalance-EntCustId</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_54">
+        <servlet-name>CheckAccountBalance-ECIData</servlet-name>
+        <url-pattern>/CheckAccountBalance-ECIData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_171">
+        <servlet-name>CheckAccountBalance-FetchAccountBal</servlet-name>
+        <url-pattern>/CheckAccountBalance-FetchAccountBal</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_174">
+        <servlet-name>CheckAccountBalance-ResetFCnt1</servlet-name>
+        <url-pattern>/CheckAccountBalance-ResetFCnt1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_180">
+        <servlet-name>CheckAccountBalance-ApiFl</servlet-name>
+        <url-pattern>/CheckAccountBalance-ApiFl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_226">
+        <servlet-name>CheckAccountBalance-ApiFC</servlet-name>
+        <url-pattern>/CheckAccountBalance-ApiFC</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_234">
+        <servlet-name>CheckAccountBalance-ExceededP</servlet-name>
+        <url-pattern>/CheckAccountBalance-ExceededP</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_239">
+        <servlet-name>CheckAccountBalance-ResetFCnt</servlet-name>
+        <url-pattern>/CheckAccountBalance-ResetFCnt</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_222">
+        <servlet-name>CheckAccountBalance-TryAgain</servlet-name>
+        <url-pattern>/CheckAccountBalance-TryAgain</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_251">
+        <servlet-name>CheckAccountBalance-AnnBal</servlet-name>
+        <url-pattern>/CheckAccountBalance-AnnBal</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_255">
+        <servlet-name>CheckAccountBalance-ABData</servlet-name>
+        <url-pattern>/CheckAccountBalance-ABData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_1">
+        <servlet-name>SendValidateOtp-Begin</servlet-name>
+        <url-pattern>/SendValidateOtp-Begin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_225">
+        <servlet-name>SendValidateOtp-NINM</servlet-name>
+        <url-pattern>/SendValidateOtp-NINM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_196">
+        <servlet-name>SendValidateOtp-ResetCnt1</servlet-name>
+        <url-pattern>/SendValidateOtp-ResetCnt1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_168">
+        <servlet-name>SendValidateOtp-ResetFCnt1</servlet-name>
+        <url-pattern>/SendValidateOtp-ResetFCnt1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_202">
+        <servlet-name>SendValidateOtp-ResetCnt</servlet-name>
+        <url-pattern>/SendValidateOtp-ResetCnt</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_208">
+        <servlet-name>SendValidateOtp-ApiFCount</servlet-name>
+        <url-pattern>/SendValidateOtp-ApiFCount</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_177">
+        <servlet-name>SendValidateOtp-SendOptApi</servlet-name>
+        <url-pattern>/SendValidateOtp-SendOptApi</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_184">
+        <servlet-name>SendValidateOtp-Failed</servlet-name>
+        <url-pattern>/SendValidateOtp-Failed</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_216">
+        <servlet-name>SendValidateOtp-ResetFCnt</servlet-name>
+        <url-pattern>/SendValidateOtp-ResetFCnt</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_185">
+        <servlet-name>SendValidateOtp-Success</servlet-name>
+        <url-pattern>/SendValidateOtp-Success</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_186">
+        <servlet-name>SendValidateOtp-EntOpt</servlet-name>
+        <url-pattern>/SendValidateOtp-EntOpt</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_221">
+        <servlet-name>SendValidateOtp-ResendOtp</servlet-name>
+        <url-pattern>/SendValidateOtp-ResendOtp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_263">
+        <servlet-name>SendValidateOtp-ResetFCnt2</servlet-name>
+        <url-pattern>/SendValidateOtp-ResetFCnt2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_269">
+        <servlet-name>SendValidateOtp-ReEnterOtp</servlet-name>
+        <url-pattern>/SendValidateOtp-ReEnterOtp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_273">
+        <servlet-name>SendValidateOtp-ResetFCnt3</servlet-name>
+        <url-pattern>/SendValidateOtp-ResetFCnt3</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_247">
+        <servlet-name>SendValidateOtp-ValidateOtp</servlet-name>
+        <url-pattern>/SendValidateOtp-ValidateOtp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_255">
+        <servlet-name>SendValidateOtp-ApiFCount1</servlet-name>
+        <url-pattern>/SendValidateOtp-ApiFCount1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_262">
+        <servlet-name>CheckAccountBalance-SendValidateOtp</servlet-name>
+        <url-pattern>/CheckAccountBalance-SendValidateOtp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_NINM_1">
+        <servlet-name>NINM-Begin</servlet-name>
+        <url-pattern>/NINM-Begin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_NINM_105">
+        <servlet-name>NINM-CkeckNINM</servlet-name>
+        <url-pattern>/NINM-CkeckNINM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_NINM_112">
+        <servlet-name>NINM-Exceeded</servlet-name>
+        <url-pattern>/NINM-Exceeded</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_NINM_116">
+        <servlet-name>NINM-NIPrompt</servlet-name>
+        <url-pattern>/NINM-NIPrompt</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_NINM_86">
+        <servlet-name>NINM-NMPrompt</servlet-name>
+        <url-pattern>/NINM-NMPrompt</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_NINM_120">
+        <servlet-name>NINM-Retry</servlet-name>
+        <url-pattern>/NINM-Retry</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_NINM_121">
+        <servlet-name>NINM-end</servlet-name>
+        <url-pattern>/NINM-end</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_NINM_90">
+        <servlet-name>NINM-NM</servlet-name>
+        <url-pattern>/NINM-NM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_NINM_122">
+        <servlet-name>NINM-NI</servlet-name>
+        <url-pattern>/NINM-NI</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_131">
+        <servlet-name>NI_NM</servlet-name>
+        <url-pattern>/NI_NM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_119">
+        <servlet-name>NINM</servlet-name>
+        <url-pattern>/NINM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_LanguagePreference_167">
+        <servlet-name>LanguagePreference-NINM</servlet-name>
+        <url-pattern>/LanguagePreference-NINM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_LanguagePreference_178">
+        <servlet-name>LanguagePreference-NI_NM</servlet-name>
+        <url-pattern>/LanguagePreference-NI_NM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_293">
+        <servlet-name>SendValidateOtp-NI_NM</servlet-name>
+        <url-pattern>/SendValidateOtp-NI_NM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_6">
+        <servlet-name>ChangePin-CAPData</servlet-name>
+        <url-pattern>/ChangePin-CAPData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_11">
+        <servlet-name>ChangePin-EntCardNum</servlet-name>
+        <url-pattern>/ChangePin-EntCardNum</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_24">
+        <servlet-name>ChangePin-NINM</servlet-name>
+        <url-pattern>/ChangePin-NINM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_35">
+        <servlet-name>ChangePin-NI_NM</servlet-name>
+        <url-pattern>/ChangePin-NI_NM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_49">
+        <servlet-name>ChangePin-EntCvv</servlet-name>
+        <url-pattern>/ChangePin-EntCvv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_44">
+        <servlet-name>ChangePin-CvData</servlet-name>
+        <url-pattern>/ChangePin-CvData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_73">
+        <servlet-name>ChangePin-NI_NM1</servlet-name>
+        <url-pattern>/ChangePin-NI_NM1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_62">
+        <servlet-name>ChangePin-NINM1</servlet-name>
+        <url-pattern>/ChangePin-NINM1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_450">
+        <servlet-name>ChangePin-ResetFCnt1</servlet-name>
+        <url-pattern>/ChangePin-ResetFCnt1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_455">
+        <servlet-name>ChangePin-ApiFl</servlet-name>
+        <url-pattern>/ChangePin-ApiFl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_463">
+        <servlet-name>ChangePin-FetchRegisterNum</servlet-name>
+        <url-pattern>/ChangePin-FetchRegisterNum</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_467">
+        <servlet-name>ChangePin-ResetFCnt</servlet-name>
+        <url-pattern>/ChangePin-ResetFCnt</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_472">
+        <servlet-name>ChangePin-TryAgain</servlet-name>
+        <url-pattern>/ChangePin-TryAgain</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_477">
+        <servlet-name>ChangePin-ExceededP</servlet-name>
+        <url-pattern>/ChangePin-ExceededP</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_481">
+        <servlet-name>ChangePin-ApiFC</servlet-name>
+        <url-pattern>/ChangePin-ApiFC</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_498">
+        <servlet-name>ChangePin-SendValidateOtp</servlet-name>
+        <url-pattern>/ChangePin-SendValidateOtp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_504">
+        <servlet-name>ChangePin-NPData</servlet-name>
+        <url-pattern>/ChangePin-NPData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_509">
+        <servlet-name>ChangePin-EntNewPin</servlet-name>
+        <url-pattern>/ChangePin-EntNewPin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_522">
+        <servlet-name>ChangePin-NINM2</servlet-name>
+        <url-pattern>/ChangePin-NINM2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_533">
+        <servlet-name>ChangePin-NI_NM2</servlet-name>
+        <url-pattern>/ChangePin-NI_NM2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_542">
+        <servlet-name>ChangePin-ValidateNewAndOldPin</servlet-name>
+        <url-pattern>/ChangePin-ValidateNewAndOldPin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_552">
+        <servlet-name>ChangePin-AnnSamePin</servlet-name>
+        <url-pattern>/ChangePin-AnnSamePin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_556">
+        <servlet-name>ChangePin-Retry</servlet-name>
+        <url-pattern>/ChangePin-Retry</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_569">
+        <servlet-name>ChangePin-ResetCnt3</servlet-name>
+        <url-pattern>/ChangePin-ResetCnt3</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_578">
+        <servlet-name>ChangePin-CPData</servlet-name>
+        <url-pattern>/ChangePin-CPData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_582">
+        <servlet-name>ChangePin-EntConfirmPin</servlet-name>
+        <url-pattern>/ChangePin-EntConfirmPin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_595">
+        <servlet-name>ChangePin-NINM3</servlet-name>
+        <url-pattern>/ChangePin-NINM3</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_606">
+        <servlet-name>ChangePin-NI_NM3</servlet-name>
+        <url-pattern>/ChangePin-NI_NM3</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_615">
+        <servlet-name>ChangePin-ResetCnt4</servlet-name>
+        <url-pattern>/ChangePin-ResetCnt4</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_622">
+        <servlet-name>ChangePin-CheckNewAndConfirmPin</servlet-name>
+        <url-pattern>/ChangePin-CheckNewAndConfirmPin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_629">
+        <servlet-name>ChangePin-AnnPinNotMatch</servlet-name>
+        <url-pattern>/ChangePin-AnnPinNotMatch</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_635">
+        <servlet-name>ChangePin-CheckRetry</servlet-name>
+        <url-pattern>/ChangePin-CheckRetry</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_652">
+        <servlet-name>ChangePin-TryAgain1</servlet-name>
+        <url-pattern>/ChangePin-TryAgain1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_656">
+        <servlet-name>ChangePin-ApiR</servlet-name>
+        <url-pattern>/ChangePin-ApiR</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_663">
+        <servlet-name>ChangePin-ApiFC1</servlet-name>
+        <url-pattern>/ChangePin-ApiFC1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_671">
+        <servlet-name>ChangePin-ResetFCnt2</servlet-name>
+        <url-pattern>/ChangePin-ResetFCnt2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_676">
+        <servlet-name>ChangePin-ResetFCnt3</servlet-name>
+        <url-pattern>/ChangePin-ResetFCnt3</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_681">
+        <servlet-name>ChangePin-PinChangeApi</servlet-name>
+        <url-pattern>/ChangePin-PinChangeApi</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_684">
+        <servlet-name>ChangePin-AnnPinChanged</servlet-name>
+        <url-pattern>/ChangePin-AnnPinChanged</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_GlobalMenu_1">
+        <servlet-name>GlobalMenu-Begin</servlet-name>
+        <url-pattern>/GlobalMenu-Begin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_GlobalMenu_4">
+        <servlet-name>GlobalMenu-GMData</servlet-name>
+        <url-pattern>/GlobalMenu-GMData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_GlobalMenu_9">
+        <servlet-name>GlobalMenu-GlobalMenu</servlet-name>
+        <url-pattern>/GlobalMenu-GlobalMenu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_270">
+        <servlet-name>CheckAccountBalance-NINM</servlet-name>
+        <url-pattern>/CheckAccountBalance-NINM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_282">
+        <servlet-name>CheckAccountBalance-NI_NM</servlet-name>
+        <url-pattern>/CheckAccountBalance-NI_NM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_291">
+        <servlet-name>CheckAccountBalance-NI_NM1</servlet-name>
+        <url-pattern>/CheckAccountBalance-NI_NM1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_296">
+        <servlet-name>CheckAccountBalance-NINM1</servlet-name>
+        <url-pattern>/CheckAccountBalance-NINM1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_GlobalMenu_23">
+        <servlet-name>GlobalMenu-NI_NM</servlet-name>
+        <url-pattern>/GlobalMenu-NI_NM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_GlobalMenu_28">
+        <servlet-name>GlobalMenu-NINM</servlet-name>
+        <url-pattern>/GlobalMenu-NINM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_GlobalMenu_43">
+        <servlet-name>GlobalMenu-End</servlet-name>
+        <url-pattern>/GlobalMenu-End</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_GlobalMenu_44">
+        <servlet-name>GlobalMenu-MainMenu</servlet-name>
+        <url-pattern>/GlobalMenu-MainMenu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_310">
+        <servlet-name>CheckAccountBalance-GlobalMenu</servlet-name>
+        <url-pattern>/CheckAccountBalance-GlobalMenu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_316">
+        <servlet-name>CheckAccountBalance-MainMenu</servlet-name>
+        <url-pattern>/CheckAccountBalance-MainMenu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_GlobalMenu_47">
+        <servlet-name>GlobalMenu-MenuInput</servlet-name>
+        <url-pattern>/GlobalMenu-MenuInput</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_GlobalMenu_59">
+        <servlet-name>GlobalMenu-ResetCnt</servlet-name>
+        <url-pattern>/GlobalMenu-ResetCnt</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_142">
+        <servlet-name>ResetCnt</servlet-name>
+        <url-pattern>/ResetCnt</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_319">
+        <servlet-name>CheckAccountBalance-ResetCnt</servlet-name>
+        <url-pattern>/CheckAccountBalance-ResetCnt</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_327">
+        <servlet-name>CheckAccountBalance-ResetCnt1</servlet-name>
+        <url-pattern>/CheckAccountBalance-ResetCnt1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_CheckAccountBalance_335">
+        <servlet-name>CheckAccountBalance-ResetCnt2</servlet-name>
+        <url-pattern>/CheckAccountBalance-ResetCnt2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_699">
+        <servlet-name>ChangePin-ResetCnt</servlet-name>
+        <url-pattern>/ChangePin-ResetCnt</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_707">
+        <servlet-name>ChangePin-ResetCnt1</servlet-name>
+        <url-pattern>/ChangePin-ResetCnt1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_715">
+        <servlet-name>ChangePin-ResetCnt2</servlet-name>
+        <url-pattern>/ChangePin-ResetCnt2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_724">
+        <servlet-name>ChangePin-MainMenu</servlet-name>
+        <url-pattern>/ChangePin-MainMenu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_725">
+        <servlet-name>ChangePin-GlobalMenu</servlet-name>
+        <url-pattern>/ChangePin-GlobalMenu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_LanguagePreference_187">
+        <servlet-name>LanguagePreference-ResetCnt</servlet-name>
+        <url-pattern>/LanguagePreference-ResetCnt</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_LanguagePreference_195">
+        <servlet-name>LanguagePreference-ResetCnt1</servlet-name>
+        <url-pattern>/LanguagePreference-ResetCnt1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_153">
+        <servlet-name>loadD</servlet-name>
+        <url-pattern>/loadD</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_LanguagePreference_203">
+        <servlet-name>LanguagePreference-ChechInput</servlet-name>
+        <url-pattern>/LanguagePreference-ChechInput</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_LanguagePreference_215">
+        <servlet-name>LanguagePreference-End</servlet-name>
+        <url-pattern>/LanguagePreference-End</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_AT_6">
+        <servlet-name>AT-AT</servlet-name>
+        <url-pattern>/AT-AT</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_AT_12">
+        <servlet-name>AT-ATD</servlet-name>
+        <url-pattern>/AT-ATD</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_301">
+        <servlet-name>SendValidateOtp-OtpData</servlet-name>
+        <url-pattern>/SendValidateOtp-OtpData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_ChangePin_733">
+        <servlet-name>ChangePin-AsF</servlet-name>
+        <url-pattern>/ChangePin-AsF</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SendValidateOtp_308">
+        <servlet-name>SendValidateOtp-EP</servlet-name>
+        <url-pattern>/SendValidateOtp-EP</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_176">
+        <servlet-name>EndReason</servlet-name>
+        <url-pattern>/EndReason</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_187">
+        <servlet-name>Hangup</servlet-name>
+        <url-pattern>/Hangup</url-pattern>
+    </servlet-mapping>
+</web-app>
